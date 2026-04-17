@@ -4,7 +4,18 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-    let sor = s.split('').sort().join('')
-    let sor2 = t.split('').sort().join('')
-    return sor==sor2
+    let obj1 = {}
+    let obj2 = {}
+    for(let val of s){
+        obj1[val] = (obj1[val]||0)+1
+    }
+    for(let val of t){
+        obj2[val] = (obj2[val]||0)+1
+    }
+    for(let key in obj1){
+        if(obj1[key] != obj2[key]){
+            return false
+        }
+    }
+    return true
 };
