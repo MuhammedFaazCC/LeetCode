@@ -17,5 +17,10 @@ var isAnagram = function(s, t) {
             return false
         }
     }
+    for(let key in obj2){
+        if(obj1[key] != obj2[key]){
+            return false
+        }
+    }
     return true
 };
