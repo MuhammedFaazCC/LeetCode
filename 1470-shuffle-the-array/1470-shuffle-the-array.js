@@ -4,12 +4,10 @@
  * @return {number[]}
  */
 var shuffle = function(nums, n) {
-    let a = nums.slice(0, n);
-    let b = nums.slice(n);
     let res = [];
-    for(let i=0 ; i<a.length ; i++){
-        res.push(a[i]);
-        res.push(b[i]);
+    for(let i=0 ; i<n ; i++){
+        res.push(nums[i]);
+        res.push(nums[n+i]);
     }
     return res;
 };
